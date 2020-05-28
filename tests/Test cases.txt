@@ -1,0 +1,198 @@
+Top test-cases for imdb-250 page (from High priority to low):
+
+1. Check that Shorts, TV movies, and documentaries are not included for this rating
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Open each film, one by one
+ Expected result:
+4) The film genre on the film page should not be 'Short' or 'TV-movie' or 'documentary'
+
+2. Check that the IMDB Top 250 page includes only those films with more than 25,000 users ratings
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Click on 5 chosen films (1, 2, 125, 249 and 250) one by one and check Number of ratings on each film page
+Expected result:
+4) Number of ratings should be >= 25000
+
+3. Check that IMDb Top 250 rating does not include films with ratings >= 9.4
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+Expected result:
+1) IMDb rating should be from hight to low
+
+4. Сheck that IMDb Top 250 rating on the imdb-top-250 page from high to low
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+Expected result:
+1) Rating should be from hight to low
+2) Sort-by drop-down menu should be in position 'Ranking'
+
+5. Check 'Descending order' button for 'Ranking' drop-down
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Select the drop-down menu item to 'Ranking'
+4) Push the button 'Descending order'
+5) Rating should be from low to high
+6) Push the button 'Descending order' again
+Expected result:
+1) Rating should be returned to 'from High to low' again
+
+6. Check to sort by IMDb Rating
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Select the drop-down menu item to 'IMDb Rating'
+Expected result:
+1) IMDb rating should be from hight to low depending on requirements
+
+7. Check 'Descending order' button for 'IMDb Rating' drop-down
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Select drop-down menu item to 'IMDb Rating'
+4) Push the button 'Descending order'
+5) IMDb Rating should be from low to high
+6) Push the button 'Descending order' again
+Expected result:
+1) IMDb Rating should be returned to 'from High to low' again
+
+8. Check to sort by 'Release date'
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Select the drop-down menu item to 'Release date'
+Expected result:
+1) Films should be arranged in chronological order from last (newest) to first (oldest)
+
+9. Check 'Descending order' button for 'Release date' drop-down
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Select the drop-down menu item to 'Release date'
+4) Push the button 'Descending order'
+5) The release date should be in the opposite order: from oldest to newest
+6) Push the button 'Descending order' again
+Expected result:
+1) The release date should be returned to 'from last (newest) to first (oldest)' again
+
+10. Check to sort by 'Number of ratings'
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Select drop-down menu item to 'Number of ratings'
+Expected result:
+1) Films should be sorted by the number of ratings: from highest to lowest
+
+11. Check 'Descending order' button for 'Number of ratings' drop-down
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Select drop-down menu item to 'Number of ratings'
+4) Push the button 'Descending order'
+5) Number of ratings should be in the opposite order: from lowest to highest
+6) Push the button 'Descending order' again
+Expected result:
+1) Number of ratings should be returned to 'from highest to lowest' again
+
+12. Check to sort by 'Your rating' with no unauthorized user
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Select the drop-down menu item to 'Your rating'
+Expected result:
+1) Films should be sorted like a Rating: from highest to lowest, bcz user didn't log in
+
+13. Check to sort by 'Your rating' with authorized user
+Steps:
+1) Clear browser cache
+2) Go to the SIGN IN page: "https://www.imdb.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.imdb.com%2Fregistration%2Fap-signin-handler%2Fimdb_us&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=imdb_us&openid.mode=checkid_setup&siteState=eyJvcGVuaWQuYXNzb2NfaGFuZGxlIjoiaW1kYl91cyIsInJlZGlyZWN0VG8iOiJodHRwczovL3d3dy5pbWRiLmNvbS8_cmVmXz1sb2dpbiJ9&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&tag=imdbtag_reg-20"
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Select drop-down menu item to 'Your rating'
+Expected result:
+1) Films should be sorted like a User Rating: from highest to lowest
+
+14. Check 'Descending order' button for 'Your rating' drop-down
+Steps:
+1) Clear browser cache
+2) Go to the SIGN IN page: "https://www.imdb.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.imdb.com%2Fregistration%2Fap-signin-handler%2Fimdb_us&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=imdb_us&openid.mode=checkid_setup&siteState=eyJvcGVuaWQuYXNzb2NfaGFuZGxlIjoiaW1kYl91cyIsInJlZGlyZWN0VG8iOiJodHRwczovL3d3dy5pbWRiLmNvbS8_cmVmXz1sb2dpbiJ9&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&tag=imdbtag_reg-20"
+3) Log in as any user
+4) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+5) Select drop-down menu item to 'Your rating'
+6) Push the button 'Descending order'
+7) Your Raiting should be from low to high
+8) Push the button 'Descending order' again
+Expected result:
+1) Your Raiting should be returned to 'from High to low' again
+
+15. Check 'Add to watch list' for unauthorized user
+Steps:
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Choose one film on the list and click 'Add to watch list button'
+Expected result:
+1) Redirect to sign-in page
+
+16. Check 'Add to watch list' for authorized user
+Steps:
+1) Clear browser cache
+2) Go to the SIGN IN page: "https://www.imdb.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.imdb.com%2Fregistration%2Fap-signin-handler%2Fimdb_us&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=imdb_us&openid.mode=checkid_setup&siteState=eyJvcGVuaWQuYXNzb2NfaGFuZGxlIjoiaW1kYl91cyIsInJlZGlyZWN0VG8iOiJodHRwczovL3d3dy5pbWRiLmNvbS8_cmVmXz1sb2dpbiJ9&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&tag=imdbtag_reg-20"
+3) Log in as any user
+4) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+5) Choose one film on the list and click 'Add to watch list button'
+Expected result:
+1) Button color changed to 'green'
+2) Watch-list count on the right corner has incremented
+
+17. Check 'Your rating' star-button for unauthorized user
+1) Clear browser cache
+2) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+3) Choose one film on the list and click 'your rating' star
+Expected result:
+1) Redirect to sign-in page
+
+18. Check 'Your rating' star-button for the authorized user
+Steps:
+1) Clear browser cache
+2) Go to the SIGN IN page: "https://www.imdb.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.imdb.com%2Fregistration%2Fap-signin-handler%2Fimdb_us&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=imdb_us&openid.mode=checkid_setup&siteState=eyJvcGVuaWQuYXNzb2NfaGFuZGxlIjoiaW1kYl91cyIsInJlZGlyZWN0VG8iOiJodHRwczovL3d3dy5pbWRiLmNvbS8_cmVmXz1sb2dpbiJ9&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&tag=imdbtag_reg-20"
+3) Log in as any user
+4) Go to the "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+5) Choose one film on the list and click 'Your rating'
+6) Choose any count of stars
+Expected result:
+1) The star should turn blue
+2) Near star you should see your rating of choosed film
+
+=====================================================================================================================
+Detailed Junior Cases
+=====================================================================================================================
+4. Сheck that IMDb Top 250 rating on the imdb-top-250 page from high to low
+1) Open your browser
+2) Go to settings -> History
+3) Push button 'Clear cache'
+4) Go to the page "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+Expected result:
+5) imdb rating should be from high to low
+6) Rating should't be >=9.4
+7) All film-icons should be present
+8) Sort-by column should be in 'Rating' position
+
+8. Check to sort by 'Release date'
+1) Open your browser
+2) Go to settings -> History
+3) Push button 'Clear cache'
+4) Go to the page "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+5) Select the drop-down menu item "Release Date"
+6) Wait until the table reloads
+Expected result:
+Release dates should be from newest to oldest
+
+=====================================================================================================================
+Cases for pre-release(smoke) test suite:
+=====================================================================================================================
+
+at least Numbers 1-9,13,14,16,18
